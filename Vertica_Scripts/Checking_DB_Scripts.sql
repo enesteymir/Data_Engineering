@@ -20,6 +20,12 @@ order  by sum(used_bytes) desc;
 SELECT GET_COMPLIANCE_STATUS();
 
 
+-- List the functions
+SELECT *
+FROM v_catalog.user_functions
+WHERE schema_name NOT LIKE 'v_%' ;
+
+
 
 
 
