@@ -26,6 +26,9 @@ FROM v_catalog.user_functions
 WHERE schema_name NOT LIKE 'v_%' ;
 
 
+-- Grant Functions
+GRANT ALL ON LIBRARY public.ApproximateLib to user;
+GRANT ALL ON TRANSFORM FUNCTION public.APPROXIMATE_PERCENTILE(FLOAT) TO user;
 
 
 
