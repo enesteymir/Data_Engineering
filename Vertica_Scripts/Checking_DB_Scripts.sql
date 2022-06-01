@@ -26,9 +26,16 @@ FROM v_catalog.user_functions
 WHERE schema_name NOT LIKE 'v_%' ;
 
 
+-- Show enabled roles and search paths, set path to schema for functions
+SHOW search_path;
+SHOW enabled roles;
+SET SEARCH_PATH to external, public;
+
+
 -- Grant Functions
-GRANT ALL ON LIBRARY public.ApproximateLib to user;
-GRANT ALL ON TRANSFORM FUNCTION public.APPROXIMATE_PERCENTILE(FLOAT) TO user;
+GRANT ALL ON LIBRARY public.ApproximateLib to dbadmin;
+GRANT EXECUTE ON TRANSFORM FUNCTION public.APPROXIMATE_PERCENTILE() TO dbadmin;
+GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO dbadmin;
 
 
 
