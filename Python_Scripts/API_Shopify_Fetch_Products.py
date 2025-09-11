@@ -12,11 +12,11 @@ from datetime import datetime
 # COMMAND ----------
 
 # these credentials are retrieved from the Shopify > Settings > Apps and sales channels > Develop apps
-# the URL : https://admin.shopify.com/store/xtfpan-ku/settings/apps/development
-SHOP_NAME = 'xtfpan-ku'
-API_KEY = '65c8f19865b87429e8e70cc7ad4b4e81'
-API_SECRET_KEY = 'cd8d4372060185b088462222ae2820f3'
-API_ACCESS_TOKEN = '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'
+# the URL : https://admin.shopify.com/store/{SHOP_NAME}/settings/apps/development
+SHOP_NAME = 'x....u'
+API_KEY = '65c...........81'
+API_SECRET_KEY = 'cd8.............f3'
+API_ACCESS_TOKEN = 'shpat_23c............a919d'
 API_VERSION = "2025-07"
 
 # COMMAND ----------
@@ -83,7 +83,7 @@ def fetch_products_in_batches():
 
 containerName = "shopify"
 storageAccountName = "blobexternals"
-sas = "?sv=2023-01-03&st=2025-06-09T00%3A45%3A15Z&se=2030-12-10T00%3A45%3A00Z&sr=c&sp=racwdxltf&sig=4l%2B20TsA3WRAt0H8nNjK74i91ThJt0DkKSfn6Ea%2FU1s%3D"
+sas = "?sv=2023-01-03&st=2025-06-09T00................6Ea%2FU1s%3D"
 config = "fs.azure.sas." + containerName+ "." + storageAccountName + ".blob.core.windows.net"
 
 try:
